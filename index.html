@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="result">
+                <h2 class="text"></h2>
+            </div>
+            <div class="buttoncontainer">
+                <button onclick="resetChars()" class="btn" data-delete="clear">DEL</button>
+                <button class="btn">+/-</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="/">/</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="7">7</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="8">8</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="9">9</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="*">x</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="4">4</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="5">5</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="6">6</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="-">-</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="1">1</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="2">2</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="3">3</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="+">+</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number="0">0</button>
+                <button onclick="addNumberToArray(this)" class="btn" data-number=".">.</button>
+                <button onclick="operate(this)" class="btn" data-operator="=">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
