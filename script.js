@@ -34,50 +34,10 @@ function addNumberToArray(element){
 
 function operate(element){
     if (element && element.dataset && element.dataset.operator !== undefined) {
-        b = Number(arrayForAB.slice(String(a).length+1,arrayForAB.length));
-        if (operator==="+"){
-            sum = add(a,b);
-            resetCharsWithinFunction();
-            return str.innerHTML = sum;
-        }
-        else if (operator==="-"){
-            sum = subtract(a,b);
-            resetCharsWithinFunction();
-            return str.innerHTML = sum;
-        }
-        else if (operator==="*"){
-            sum = multiply(a,b);
-            resetCharsWithinFunction();
-            return str.innerHTML = sum;
-        }
-        else if (operator==="/"){
-            sum = divide(a,b);
-            resetCharsWithinFunction();
-            return str.innerHTML = sum;
-        }
+        handleOperators();
     } 
     else {
-        b = Number(arrayForAB.slice(String(a).length+1,arrayForAB.length));
-        if (operator==="+"){
-            sum = add(a,b);
-            resetCharsWithinFunction();
-            return str.innerHTML = sum;
-        }
-        else if (operator==="-"){
-            sum = subtract(a,b);
-            resetCharsWithinFunction();
-            return str.innerHTML = sum;
-        }
-        else if (operator==="*"){
-            sum = multiply(a,b);
-            resetCharsWithinFunction();
-            return str.innerHTML = sum;
-        }
-        else if (operator==="/"){
-            sum = divide(a,b);
-            resetCharsWithinFunction();
-            return str.innerHTML = sum;
-        }
+        handleOperators();
     }
 }
 
@@ -101,6 +61,30 @@ function resetCharsWithinFunction(){
     a = sum;
     arrayForAB = String(a);
     arrayForCheck = String(a);
+}
+
+function handleOperators(){
+    b = Number(arrayForAB.slice(String(a).length+1,arrayForAB.length));
+    if (operator==="+"){
+        sum = add(a,b);
+        resetCharsWithinFunction();
+        return str.innerHTML = sum;
+    }
+    else if (operator==="-"){
+        sum = subtract(a,b);
+        resetCharsWithinFunction();
+        return str.innerHTML = sum;
+    }
+    else if (operator==="*"){
+        sum = multiply(a,b);
+        resetCharsWithinFunction();
+        return str.innerHTML = sum;
+    }
+    else if (operator==="/"){
+        sum = divide(a,b);
+        resetCharsWithinFunction();
+        return str.innerHTML = sum;
+    }
 }
 
 function add(a,b){
