@@ -1,1 +1,1 @@
-demo: https://dziugasj123.github.io/calculator-js/
+https://dziugas-j.github.io/calculator-js/
